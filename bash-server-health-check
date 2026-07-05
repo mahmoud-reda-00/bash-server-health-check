@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #
-# server_health_check.sh
+# bash-server-health-check
 #
 # A DevOps capstone project script to check the health
 # of multiple remote servers via SSH.
 #
-# Usage: ./server_health_check.sh -f <server_list_file> -u <remote_user>
+# Usage: ./bash-server-health-check -f <server_list_file> -u <remote_user>
 #
 # --- Part 1: "Strict Mode" (from section 9) ---
 # set -e: exit immediately if any command fails
@@ -50,8 +50,7 @@ local server="$1"
 local user="$2"
 log_info "--- Checking Server: $server ---"
 # Use an SSH here-document to send a batch of commands in one connection
-
-ssh -n -o ConnectTimeout=5 "${user}@${server}" << 'EOF'
+ssh  -o ConnectTimeout=5 "${user}@${server}" << 'EOF'
 # 1. Uptime Check
 echo "--- System Uptime ---"
 uptime
@@ -109,7 +108,6 @@ done
 if [[ -z "$server_file" || -z "$remote_user" ]]; then
 log_error "Missing required arguments."
 print_usage
-
 exit 1
 fi
 if [[ ! -f "$server_file" ]]; then
