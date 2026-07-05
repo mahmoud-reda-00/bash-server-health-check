@@ -1,4 +1,4 @@
-# Server Health Check
+# Bash Server Health Check
 
 A Bash automation script that connects to multiple remote Linux servers over SSH and collects essential system health information. This project demonstrates Bash scripting best practices, including strict mode, argument parsing, logging, error handling, and automation.
 
@@ -25,7 +25,7 @@ A Bash automation script that connects to multiple remote Linux servers over SSH
 ## Project Structure
 
 ```text
-server-health-check/
+bash-server-health-check/
 ├── server_health_check.sh
 ├── servers.txt.example
 ├── README.md
@@ -87,17 +87,17 @@ Failed SSH Attempts: 5
 ## Bash Concepts Demonstrated
 
 * Functions
-* Variables and constants
+* Variables and Constants
 * Arrays
 * Loops
-* Conditional statements
-* Argument parsing with `getopts`
+* Conditional Statements
+* Argument Parsing with `getopts`
 * Here Documents
-* SSH automation
+* SSH Automation
 * Logging
-* Input validation
-* Error handling
-* `trap` and cleanup
+* Input Validation
+* Error Handling
+* `trap` and Cleanup
 * Bash Strict Mode (`set -euo pipefail`)
 
 ## Future Improvements
