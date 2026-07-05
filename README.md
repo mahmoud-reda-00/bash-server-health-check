@@ -26,7 +26,7 @@ A Bash automation script that connects to multiple remote Linux servers over SSH
 
 ```text
 bash-server-health-check/
-├── server_health_check.sh
+├── bash-server-health-check
 ├── servers.txt.example
 ├── README.md
 ├── LICENSE
@@ -38,19 +38,19 @@ bash-server-health-check/
 Make the script executable:
 
 ```bash
-chmod +x server_health_check.sh
+chmod +x bash-server-health-check
 ```
 
 Run the script:
 
 ```bash
-./server_health_check.sh -f servers.txt -u <remote_user>
+./bash-server-health-check -f servers.txt -u <remote_user>
 ```
 
 Example:
 
 ```bash
-./server_health_check.sh -f servers.txt -u ubuntu
+./bash-server-health-check -f servers.txt -u ubuntu
 ```
 
 ## Example Server List
